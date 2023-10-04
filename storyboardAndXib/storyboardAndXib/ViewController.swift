@@ -14,9 +14,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tblView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
-        tblView.register(nib, forCellReuseIdentifier: "CustomTableViewCell")
-        tblView.rowHeight = UITableView.automaticDimension
+//        let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
+//        tblView.register(nib, forCellReuseIdentifier: "CustomTableViewCell")
+//        tblView.rowHeight = UITableView.automaticDimension
         
         // Do any additional setup after loading the view.
     }

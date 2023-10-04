@@ -34,7 +34,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var content = cell.defaultContentConfiguration()
         
         let contactName = Array(contacts.keys)[indexPath.row]
-        let associateData = contacts[contactName] ?? ""
+        let associateData = contacts[contactName] ?? " "
         
         content.text = contactName
         cell.contentConfiguration = content

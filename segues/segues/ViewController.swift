@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  segues
 //
-//  Created by P10 on 28/09/23.
+//  Created by P10 on 04/10/23.
 //
 
 import UIKit
@@ -14,16 +14,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func pushSegueAction(_ sender: Any) {
-        performSegue(withIdentifier: "showSegue", sender: self)
-        
+    @IBAction func showBtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "showSegue", sender:nil)
     }
     
-    @IBAction func modalSegueAction(_ sender: Any) {
-        performSegue(withIdentifier: "modalSegue", sender: self)
+    @IBAction func modalBtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "modalSegue", sender:nil)
     }
-    
-    @IBAction func popoverSegueAction(_ sender: Any) {
+    @IBAction func customBtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "pushSegue", sender:nil)
     }
 }
 

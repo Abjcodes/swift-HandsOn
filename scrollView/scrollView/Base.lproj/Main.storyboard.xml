@@ -21,13 +21,42 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AnE-cK-B8r">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dzb-ds-v1z">
+                                                <rect key="frame" x="10" y="95" width="373" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="K8y-7F-H5O"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="QIT-bv-i6D">
+                                                        <rect key="frame" x="0.0" y="50" width="373" height="43.666667938232422"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QIT-bv-i6D" id="Q8K-Bp-Rpi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="373" height="43.666667938232422"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="owf-z6-e6F"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8aK-2T-Arn"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Dzb-ds-v1z" secondAttribute="trailing" constant="10" id="CjY-r3-bbv"/>
+                                            <constraint firstItem="Dzb-ds-v1z" firstAttribute="leading" secondItem="AnE-cK-B8r" secondAttribute="leading" constant="10" id="hle-xa-pGX"/>
+                                            <constraint firstItem="Dzb-ds-v1z" firstAttribute="top" secondItem="AnE-cK-B8r" secondAttribute="top" constant="95" id="xWK-lr-iFK"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="AnE-cK-B8r" firstAttribute="top" secondItem="Y4N-ei-VxU" secondAttribute="top" id="3JK-ce-XWy"/>
                                     <constraint firstItem="AnE-cK-B8r" firstAttribute="bottom" secondItem="Y4N-ei-VxU" secondAttribute="bottom" id="8nz-37-37t"/>
                                     <constraint firstAttribute="bottom" secondItem="AnE-cK-B8r" secondAttribute="bottom" id="BPj-bY-cvn"/>
+                                    <constraint firstItem="AnE-cK-B8r" firstAttribute="width" secondItem="dIV-UY-Nlv" secondAttribute="width" id="JdB-AF-EOK"/>
                                     <constraint firstItem="AnE-cK-B8r" firstAttribute="top" secondItem="dIV-UY-Nlv" secondAttribute="top" id="LZY-3r-ach"/>
                                     <constraint firstItem="AnE-cK-B8r" firstAttribute="leading" secondItem="Y4N-ei-VxU" secondAttribute="leading" id="MXP-vY-d88"/>
                                     <constraint firstAttribute="trailing" secondItem="AnE-cK-B8r" secondAttribute="trailing" id="hV7-6T-E9n"/>
@@ -47,6 +76,9 @@
                             <constraint firstItem="dIV-UY-Nlv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ax3-MR-Mj6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heightConstant" destination="K8y-7F-H5O" id="vdR-23-gBs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

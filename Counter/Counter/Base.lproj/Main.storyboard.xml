@@ -60,7 +60,7 @@
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="ZO8-qf-Lhm" id="unx-yG-71s"/>
-                        <outlet property="viewOutlet" destination="Hes-B4-6gT" id="13O-tm-2Qm"/>
+                        <outlet property="tapRegion" destination="Hes-B4-6gT" id="13O-tm-2Qm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

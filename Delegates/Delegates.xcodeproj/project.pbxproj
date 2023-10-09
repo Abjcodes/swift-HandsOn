@@ -13,7 +13,7 @@
 		04B854852ACC090100C51281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B854832ACC090100C51281 /* Main.storyboard */; };
 		04B854872ACC090300C51281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B854862ACC090300C51281 /* Assets.xcassets */; };
 		04B8548A2ACC090300C51281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B854882ACC090300C51281 /* LaunchScreen.storyboard */; };
-		04B854922ACC0A5800C51281 /* selectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B854912ACC0A5800C51281 /* selectionScreen.swift */; };
+		04B854922ACC0A5800C51281 /* SelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B854912ACC0A5800C51281 /* SelectionScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		04B854862ACC090300C51281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B854892ACC090300C51281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B8548B2ACC090300C51281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04B854912ACC0A5800C51281 /* selectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectionScreen.swift; sourceTree = "<group>"; };
+		04B854912ACC0A5800C51281 /* SelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				04B854862ACC090300C51281 /* Assets.xcassets */,
 				04B854882ACC090300C51281 /* LaunchScreen.storyboard */,
 				04B8548B2ACC090300C51281 /* Info.plist */,
-				04B854912ACC0A5800C51281 /* selectionScreen.swift */,
+				04B854912ACC0A5800C51281 /* SelectionScreen.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 			files = (
 				04B854822ACC090100C51281 /* ViewController.swift in Sources */,
 				04B8547E2ACC090100C51281 /* AppDelegate.swift in Sources */,
-				04B854922ACC0A5800C51281 /* selectionScreen.swift in Sources */,
+				04B854922ACC0A5800C51281 /* SelectionScreen.swift in Sources */,
 				04B854802ACC090100C51281 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

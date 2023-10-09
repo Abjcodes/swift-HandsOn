@@ -9,14 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     var count = 0
-    @IBOutlet weak var viewOutlet: UIView!
+    @IBOutlet weak var tapRegion: UIView!
     @IBOutlet weak var counterLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         
-        viewOutlet.addGestureRecognizer(tapGestureRecognizer)
+        tapRegion.addGestureRecognizer(tapGestureRecognizer)
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer){

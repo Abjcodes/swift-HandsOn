@@ -14,7 +14,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -23,7 +22,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-        cell.labelOutlet.text = self.alphabetArray[indexPath.row]
+        cell.alphabet.text = self.alphabetArray[indexPath.row]
         cell.backgroundColor = UIColor.blue
         return cell
     }
@@ -31,9 +30,5 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Item selected : \(alphabetArray[indexPath.item])")
     }
-    
-    
-
-
 }
 

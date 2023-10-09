@@ -15,7 +15,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
     }
     
     let contacts: [String: String] = [
@@ -32,10 +31,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"contactCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        
         let contactName = Array(contacts.keys)[indexPath.row]
         let associateData = contacts[contactName] ?? " "
-        
         content.text = contactName
         cell.contentConfiguration = content
         return cell
@@ -46,7 +43,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let selectedContactName = Array(contacts.keys)[selectedIndexPath]
         let selectedContactNumber = contacts[selectedContactName]
         let destinationVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        
         destinationVC.selectedContact = selectedContactNumber
         navigationController?.pushViewController(destinationVC, animated: true)
     }

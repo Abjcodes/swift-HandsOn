@@ -30,7 +30,7 @@
                                     <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="avV-2K-mcW"/>
+                                    <action selector="btnOnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="avV-2K-mcW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,7 +62,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text inside first container" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZ3-Yd-LxZ">
-                                                <rect key="frame" x="101.33333333333331" y="116.33333333333334" width="190.66666666666669" height="20.333333333333343"/>
+                                                <rect key="frame" x="101.33333333333333" y="116.33333333333334" width="190.66666666666669" height="20.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -78,7 +78,7 @@
                                         <rect key="frame" x="0.0" y="253" width="393" height="253"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text inside second container" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKD-6D-aQa">
-                                                <rect key="frame" x="88" y="116.33333333333331" width="217.33333333333337" height="20.333333333333343"/>
+                                                <rect key="frame" x="88.000000000000014" y="116.33333333333331" width="217.33333333333337" height="20.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>

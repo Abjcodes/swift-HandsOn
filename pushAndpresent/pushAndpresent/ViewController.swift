@@ -11,19 +11,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-    @IBAction func activatePushTap(_ sender: Any) {
-        if let firstVC = storyboard?.instantiateViewController(withIdentifier: "pushedVC") {
-                    navigationController?.pushViewController(firstVC, animated: true)
-                }
+    @IBAction func pushToNextViewController(_ sender: Any) {
+        if let firstVC = storyboard?.instantiateViewController(withIdentifier: "pushedVC") 
+        {
+            navigationController?.pushViewController(firstVC, animated: true)
+        }
     }
     
-    @IBAction func activatePresentTap(_ sender: Any) {
-        if let firstVC = storyboard?.instantiateViewController(withIdentifier: "pushedVC") {
-                    navigationController?.present(firstVC, animated: true)
-                }
+    @IBAction func presentNextViewController(_ sender: Any) {
+        if let firstVC = storyboard?.instantiateViewController(withIdentifier: "presentedVC") 
+        {
+            navigationController?.present(firstVC, animated: true)
+        }
     }
 }
 

@@ -54,7 +54,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="UNz-hq-zwH"/>
                     <connections>
-                        <outlet property="labelOutlet" destination="Icy-EB-IxK" id="97O-ZE-hyN"/>
+                        <outlet property="selectedValueOutlet" destination="Icy-EB-IxK" id="97O-ZE-hyN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,7 +64,7 @@
         <!--selectionVC-->
         <scene sceneID="e83-zw-vcN">
             <objects>
-                <viewController storyboardIdentifier="selectionVC" title="selectionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AuQ-ss-7ML" customClass="selectionScreen" customModule="Delegates" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectionVC" title="selectionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AuQ-ss-7ML" customClass="SelectionScreen" customModule="Delegates" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6nK-gf-qGS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

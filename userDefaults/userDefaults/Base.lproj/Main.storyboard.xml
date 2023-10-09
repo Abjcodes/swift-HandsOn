@@ -94,7 +94,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="labelOutlet" destination="7DR-CQ-gN6" id="l1Q-M1-lls"/>
+                        <outlet property="displayValue" destination="7DR-CQ-gN6" id="FLp-cl-hQA"/>
                         <outlet property="textInput" destination="2fU-mm-woO" id="HQS-Rj-6d0"/>
                     </connections>
                 </viewController>

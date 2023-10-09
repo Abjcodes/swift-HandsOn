@@ -16,8 +16,7 @@ class ViewController: UIViewController {
         swipeGestureRecognizer.direction = .left
 //        viewOutlet.addGestureRecognizer(swipeGestureRecognizer)
         self.view.addGestureRecognizer(swipeGestureRecognizer)
-        // Do any additional setup after loading the view.
-    }
+}
     
     @objc func handleSwipe(_ sender: UISwipeGestureRecognizer) {
             print("Swiped")

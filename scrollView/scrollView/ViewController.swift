@@ -11,7 +11,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var heightConstant: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         heightConstant.constant = CGFloat(Double(70 * 43.6))
     }
     
@@ -24,7 +23,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel!.text = "This is a cell"
         return cell
     }
-
-
+    
 }
 

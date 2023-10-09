@@ -29,11 +29,11 @@ struct Employee: Codable {
     }
 }
 
-
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let activityIndicator = UIActivityIndicatorView(style: .large)
     var employees: [Employee] = []
 
     override func viewDidLoad() {
@@ -42,12 +42,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
-        // Replace with your API URL
+        view.addSubview(activityIndicator)
+        activityIndicator.center = view.center
+        activityIndicator.startAnimating()
+        
+        // Defining object url
         let apiUrlString = "https://dummy.restapiexample.com/api/v1/employees"
         
         if let url = URL(string: apiUrlString) {
+            // Creating a session
             let session = URLSession.shared
             let task = session.dataTask(with: url) { (data, response, error) in
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+               }
                 if let error = error {
                     print("Error: \(error)")
                     return
@@ -57,28 +65,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     print("HTTP Response Error")
                     return
                 }
-                
+                //Assigning the session a task
                 if let data = data {
-                    // Assuming the API response is in JSON format
                     do {
                         let decoder = JSONDecoder()
                         let employeeResponse = try decoder.decode(EmployeeResponse.self, from: data)
                         
-                        // Access the data like this:
-                        let employees = employeeResponse.data
-                        print(employees)
+                        self.employees = employeeResponse.data
+                        print(self.employees)
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
                         }
                     } catch {
                         print("Error decoding JSON: \(error)")
                     }
-
                 }
             }
+            //Starting the task
             task.resume()
         }
     }
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return employees.count
     }
@@ -86,15 +95,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let employee = employees[indexPath.row]
-
-        cell.textLabel?.text = "Employee Name: \(employee.employeeName)"
-        cell.detailTextLabel?.text = "Salary: \(employee.employeeSalary), Age: \(employee.employeeAge)"
-        
+        cell.textLabel?.text = "Name: \(employee.employeeName) | Salary: \(employee.employeeSalary)"
         return cell
     }
-
 }
-
-
-
-

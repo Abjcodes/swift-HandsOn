@@ -7,25 +7,22 @@
 
 import UIKit
 
-
-
 class ViewController: UIViewController, ListSelectDelegate {
 
-    @IBOutlet weak var labelOutlet: UILabel!
+    @IBOutlet weak var selectedValueOutlet: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func buttonOnTap(_ sender: Any) {
-            let selectVC = storyboard?.instantiateViewController(withIdentifier:"selectionVC") as! selectionScreen
+        let selectVC = storyboard?.instantiateViewController(withIdentifier:"selectionVC") as! SelectionScreen
             selectVC.listSelectDelegate = self
             navigationController?.present(selectVC, animated: true)
             print("Button tapped")
     }
     
-    func onTapChoice(label: String) {
-        labelOutlet.text = label
+    func onChoiceSelect(label: String) {
+        selectedValueOutlet.text = label
         print(label)
     }
     

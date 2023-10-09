@@ -16,23 +16,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(handleNotification), name: Notification.Name("CustomNotification"), object: nil)
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func incrementBtnOnTap(_ sender: Any) {
         count += 1
         counterLabel.text = "\(count)"
-        
         NotificationCenter.default.post(name: Notification.Name("CustomNotification"), object: nil)
-        
     }
     
     @objc func handleNotification() {
         messageLabel.text = "Notification Received"
-        
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] _ in
                 self?.messageLabel.text = ""
-            }
+        }
     }
     
 }

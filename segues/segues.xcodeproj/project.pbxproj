@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043A21A02ACD5EA700B2C405 /* BlueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A219F2ACD5EA700B2C405 /* BlueVC.swift */; };
+		043A21A02ACD5EA700B2C405 /* PushedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A219F2ACD5EA700B2C405 /* PushedVC.swift */; };
+		0465CDDA2ACECFAF006CFA13 /* LastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465CDD92ACECFAF006CFA13 /* LastVC.swift */; };
 		04A978932ACD589000311DB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A978922ACD589000311DB9 /* AppDelegate.swift */; };
 		04A978952ACD589000311DB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A978942ACD589000311DB9 /* SceneDelegate.swift */; };
 		04A978972ACD589000311DB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A978962ACD589000311DB9 /* ViewController.swift */; };
@@ -17,7 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		043A219F2ACD5EA700B2C405 /* BlueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueVC.swift; sourceTree = "<group>"; };
+		043A219F2ACD5EA700B2C405 /* PushedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushedVC.swift; sourceTree = "<group>"; };
+		0465CDD92ACECFAF006CFA13 /* LastVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastVC.swift; sourceTree = "<group>"; };
 		04A9788F2ACD589000311DB9 /* segues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = segues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A978922ACD589000311DB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A978942ACD589000311DB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +67,8 @@
 				04A9789B2ACD589200311DB9 /* Assets.xcassets */,
 				04A9789D2ACD589200311DB9 /* LaunchScreen.storyboard */,
 				04A978A02ACD589200311DB9 /* Info.plist */,
-				043A219F2ACD5EA700B2C405 /* BlueVC.swift */,
+				043A219F2ACD5EA700B2C405 /* PushedVC.swift */,
+				0465CDD92ACECFAF006CFA13 /* LastVC.swift */,
 			);
 			path = segues;
 			sourceTree = "<group>";
@@ -141,7 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043A21A02ACD5EA700B2C405 /* BlueVC.swift in Sources */,
+				0465CDDA2ACECFAF006CFA13 /* LastVC.swift in Sources */,
+				043A21A02ACD5EA700B2C405 /* PushedVC.swift in Sources */,
 				04A978972ACD589000311DB9 /* ViewController.swift in Sources */,
 				04A978932ACD589000311DB9 /* AppDelegate.swift in Sources */,
 				04A978952ACD589000311DB9 /* SceneDelegate.swift in Sources */,

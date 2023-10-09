@@ -8,9 +8,8 @@
 import UIKit
 
 class BlueVC: UIViewController {
-    @IBAction func unwindHome(unwindSegue: UIStoryboardSegue) {
-        if let blueViewController = unwindSegue.source as? BlueVC {
-                print("Coming from BLUE")
-            }
+    
+    @IBAction func onBtnTap(_ sender: Any) {
+        performSegue(withIdentifier: "nextSegue", sender: nil)
     }
 }

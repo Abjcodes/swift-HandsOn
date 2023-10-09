@@ -8,6 +8,5 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var labelOutlet: UILabel!
+    @IBOutlet weak var alphabet: UILabel!
 }

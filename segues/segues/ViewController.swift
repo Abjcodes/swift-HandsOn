@@ -21,8 +21,11 @@ class ViewController: UIViewController {
     @IBAction func modalBtn(_ sender: Any) {
         self.performSegue(withIdentifier: "modalSegue", sender:nil)
     }
-    @IBAction func customBtn(_ sender: Any) {
-        self.performSegue(withIdentifier: "pushSegue", sender:nil)
+    
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+        // checked on run time
     }
+    
+    
 }
 

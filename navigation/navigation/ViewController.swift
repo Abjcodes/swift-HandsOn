@@ -9,17 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let sb = UIStoryboard(name: "Main", bundle: nil)
+    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-    @IBAction func onTap(_ sender: Any) {
-        let secondVC = sb.instantiateViewController(identifier: "SecondVC")
-               self.navigationController?.pushViewController(secondVC, animated: true)  
+    @IBAction func btnOnTap(_ sender: Any) {
+        let secondVC = storyBoard.instantiateViewController(identifier: "SecondVC")
+            self.navigationController?.pushViewController(secondVC, animated: true)
     }
-    
+
 }
 

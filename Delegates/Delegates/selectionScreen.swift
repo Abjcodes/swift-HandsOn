@@ -8,10 +8,10 @@
 import UIKit
 
 protocol ListSelectDelegate {
-    func onTapChoice(label: String)
+    func onChoiceSelect(label: String)
 }
 
-class selectionScreen: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class SelectionScreen: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     let data = ["One", "Two", "Three", "Four"]
     
@@ -22,7 +22,6 @@ class selectionScreen: UIViewController, UITableViewDataSource, UITableViewDeleg
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,11 +31,9 @@ class selectionScreen: UIViewController, UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        
         let arrContent = data[indexPath.row]
         content.text = arrContent
         cell.contentConfiguration = content
-        
         return cell
     }
     
@@ -45,7 +42,7 @@ class selectionScreen: UIViewController, UITableViewDataSource, UITableViewDeleg
         let selectedValue = data[selectedRow]
         print(selectedValue)
         if listSelectDelegate != nil{
-            listSelectDelegate.onTapChoice(label: selectedValue)
+            listSelectDelegate.onChoiceSelect(label: selectedValue)
             print("Visible")
         } else {
             print("Not visible")

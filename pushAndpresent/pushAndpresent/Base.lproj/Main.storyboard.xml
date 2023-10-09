@@ -28,7 +28,7 @@
                                     <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="activatePushTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vht-16-nNA"/>
+                                    <action selector="pushToNextViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vht-16-nNA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xc-oX-Xc7">
@@ -42,7 +42,7 @@
                                     <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="activatePresentTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hay-Do-WPn"/>
+                                    <action selector="presentNextViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hay-Do-WPn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -139,7 +139,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -47,7 +47,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="labelOutlet" destination="qAX-qe-o8e" id="pYs-XW-efT"/>
+                                            <outlet property="alphabet" destination="qAX-qe-o8e" id="pYs-XW-efT"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

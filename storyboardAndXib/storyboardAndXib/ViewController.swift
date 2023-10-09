@@ -14,11 +14,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tblView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
-//        tblView.register(nib, forCellReuseIdentifier: "CustomTableViewCell")
-//        tblView.rowHeight = UITableView.automaticDimension
-        
-        // Do any additional setup after loading the view.
+        let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
+        tblView.register(nib, forCellReuseIdentifier: "CustomTableViewCell")
+        tblView.rowHeight = UITableView.automaticDimension
     }
     
     
@@ -28,14 +26,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
-        
         cell.labelOutlet.text = data[indexPath.row]
-        
         return cell
     }
-    
-
-    
-
 }
 

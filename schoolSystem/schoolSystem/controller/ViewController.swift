@@ -5,25 +5,33 @@
 //  Created by P10 on 05/10/23.
 //
 
+// Refactor
+
+
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,CollectorVCDelegate {
+class ViewController: UIViewController, CollectorVCDelegate {
     
+    @IBOutlet weak var filterSegmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    
     var persons: [Person] = []
+    var filteredPersons: [Person] = []
     
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
         super.viewDidLoad()
+        setupSegmentedControl()
+        loadData()
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                 let fetchRequest: NSFetchRequest<Person> = Person.fetchRequest()
                 
                 do {
                     persons = try context.fetch(fetchRequest)
+                    filteredPersons = persons
                     print(persons)
-                    // Reload the table view to display the data
                     DispatchQueue.main.async{
                         self.tableView.reloadData()
                     }
@@ -42,67 +50,54 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
            }
        }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return persons.count
+    func setupSegmentedControl() {
+            // Set up the segmented control with initial values
+            filterSegmentedControl.removeAllSegments()
+            filterSegmentedControl.insertSegment(withTitle: "All", at: 0, animated: false)
+            filterSegmentedControl.insertSegment(withTitle: "Students", at: 1, animated: false)
+            filterSegmentedControl.insertSegment(withTitle: "Teachers", at: 2, animated: false)
+            filterSegmentedControl.selectedSegmentIndex = 0 // Initial selection
+            filterSegmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let person = persons[indexPath.row]
-        cell.textLabel?.text = person.name
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Get the managed object context
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            
-            // Delete the selected person object from Core Data
-            context.delete(persons[indexPath.row])
-            persons.remove(at: indexPath.row)
-            
-            // Save the context to persist the changes
-            do {
-                try context.save()
-            } catch {
-                print("Error deleting data from Core Data: \(error)")
-            }
-            
-            // Update the table view to reflect the deletion
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Get the selected person
-        let selectedPerson = persons[indexPath.row]
-        print(selectedPerson)
         
-        // Instantiate the DetailViewController from the storyboard
-        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailView") as? DetailView {
-            // Pass the person's name to the DetailViewController
-            detailVC.personName = selectedPerson.name ?? ""
-            detailVC.personAge = selectedPerson.age
-            detailVC.personGender = selectedPerson.gender ?? ""
-            
-            // Check if selectedPerson is a teacher
-            if let teacher = selectedPerson.teacher {
-                detailVC.personRole = "Teacher"
-                detailVC.personId = teacher.empId
-            }
-            // Check if selectedPerson is a student
-            else if let student = selectedPerson.student {
-                detailVC.personRole = "Student"
-                detailVC.personId = student.rollNo
-            }
-            
-            // Push the DetailViewController
-            navigationController?.pushViewController(detailVC, animated: true)
-        }
+        @objc func segmentedControlValueChanged() {
+            filterData()
     }
-
-
+        
+        func loadData() {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let fetchRequest: NSFetchRequest<Person> = Person.fetchRequest()
+            
+            do {
+                persons = try context.fetch(fetchRequest)
+                print(persons)
+                tableView.reloadData()
+            } catch {
+                print("Error fetching data from Core Data: \(error)")
+            }
+    }
+        
+        func filterData() {
+            let selectedSegmentIndex = filterSegmentedControl.selectedSegmentIndex
+            
+            switch selectedSegmentIndex {
+            case 0:
+                // Show all persons
+                filteredPersons = persons
+            case 1:
+                // Filter for students
+                filteredPersons = persons.filter { $0.student != nil }
+            case 2:
+                // Filter for teachers
+                filteredPersons = persons.filter { $0.teacher != nil }
+            default:
+                break
+            }
+            
+            tableView.reloadData()
+        }
     
+
     func dataSaved() {
         print("Func called")
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -110,7 +105,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 
                 do {
                     persons = try context.fetch(fetchRequest)
-                    print(persons)
+                    filteredPersons = persons
                     DispatchQueue.main.async{
                         self.tableView.reloadData()
                     }
@@ -163,7 +158,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         present(alertController, animated: true, completion: nil)
     }
-    
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let updateAction = UIContextualAction(style: .normal, title: "Update") { [weak self] (_, _, completionHandler) in
             guard let self = self else { return }
@@ -175,7 +172,65 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return UISwipeActionsConfiguration(actions: [updateAction])
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Get the selected person
+        let selectedPerson = filteredPersons[indexPath.row]
+        print(selectedPerson)
+        
+        // Instantiate the DetailViewController from the storyboard
+        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailView") as? DetailView {
+            // Pass the person's name to the DetailViewController
+            detailVC.personName = selectedPerson.name ?? ""
+            detailVC.personAge = selectedPerson.age
+            detailVC.personGender = selectedPerson.gender ?? ""
+            
+            // Check if selectedPerson is a teacher
+            if let teacher = selectedPerson.teacher {
+                detailVC.personRole = "Teacher"
+                detailVC.personId = teacher.empId
+            }
+            // Check if selectedPerson is a student
+            else if let student = selectedPerson.student {
+                detailVC.personRole = "Student"
+                detailVC.personId = student.rollNo
+            }
+            
+            // Push the DetailViewController
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Get the managed object context
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            // Delete the selected person object from Core Data
+            context.delete(filteredPersons[indexPath.row])
+            filteredPersons.remove(at: indexPath.row)
+            persons = filteredPersons
+            // Save the context to persist the changes
+            do {
+                try context.save()
+            } catch {
+                print("Error deleting data from Core Data: \(error)")
+            }
+            
+            // Update the table view to reflect the deletion
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredPersons.count // Use filteredPersons array
+    }
 
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let person = filteredPersons[indexPath.row] // Use filteredPersons array
+        cell.textLabel?.text = person.name
+        return cell
+    }
+    
 }
-

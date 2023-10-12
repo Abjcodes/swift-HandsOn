@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043824432AD7BE1400732AF9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043824422AD7BE1400732AF9 /* CoreDataManager.swift */; };
 		0465CDC32ACEA5C7006CFA13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465CDC22ACEA5C7006CFA13 /* AppDelegate.swift */; };
 		0465CDC52ACEA5C7006CFA13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465CDC42ACEA5C7006CFA13 /* SceneDelegate.swift */; };
 		0465CDC72ACEA5C7006CFA13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465CDC62ACEA5C7006CFA13 /* ViewController.swift */; };
@@ -15,16 +16,17 @@
 		0465CDCF2ACEA5C9006CFA13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0465CDCE2ACEA5C9006CFA13 /* Assets.xcassets */; };
 		0465CDD22ACEA5C9006CFA13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0465CDD02ACEA5C9006CFA13 /* LaunchScreen.storyboard */; };
 		04A6FC532AD022ED00F44810 /* CollectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6FC522AD022ED00F44810 /* CollectorVC.swift */; };
-		04A6FC672AD0299E00F44810 /* Teacher+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6FC612AD0299E00F44810 /* Teacher+CoreDataClass.swift */; };
-		04A6FC682AD0299E00F44810 /* Teacher+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6FC622AD0299E00F44810 /* Teacher+CoreDataProperties.swift */; };
-		04A6FC692AD0299E00F44810 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6FC632AD0299E00F44810 /* Person+CoreDataClass.swift */; };
-		04A6FC6A2AD0299E00F44810 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6FC642AD0299E00F44810 /* Person+CoreDataProperties.swift */; };
-		04A6FC6B2AD0299E00F44810 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6FC652AD0299E00F44810 /* Student+CoreDataClass.swift */; };
-		04A6FC6C2AD0299E00F44810 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6FC662AD0299E00F44810 /* Student+CoreDataProperties.swift */; };
+		04C190FA2AD6717700A1CBB7 /* Teacher+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C190F42AD6717700A1CBB7 /* Teacher+CoreDataClass.swift */; };
+		04C190FB2AD6717700A1CBB7 /* Teacher+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C190F52AD6717700A1CBB7 /* Teacher+CoreDataProperties.swift */; };
+		04C190FC2AD6717700A1CBB7 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C190F62AD6717700A1CBB7 /* Person+CoreDataClass.swift */; };
+		04C190FD2AD6717700A1CBB7 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C190F72AD6717700A1CBB7 /* Person+CoreDataProperties.swift */; };
+		04C190FE2AD6717700A1CBB7 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C190F82AD6717700A1CBB7 /* Student+CoreDataClass.swift */; };
+		04C190FF2AD6717700A1CBB7 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C190F92AD6717700A1CBB7 /* Student+CoreDataProperties.swift */; };
 		04DC2A422AD3E15800B57BE0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC2A412AD3E15800B57BE0 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043824422AD7BE1400732AF9 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0465CDBF2ACEA5C7006CFA13 /* schoolSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schoolSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0465CDC22ACEA5C7006CFA13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0465CDC42ACEA5C7006CFA13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,13 +36,13 @@
 		0465CDCE2ACEA5C9006CFA13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0465CDD12ACEA5C9006CFA13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0465CDD32ACEA5C9006CFA13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04A6FC522AD022ED00F44810 /* CollectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorVC.swift; sourceTree = "<group>"; };
-		04A6FC612AD0299E00F44810 /* Teacher+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Teacher+CoreDataClass.swift"; sourceTree = "<group>"; };
-		04A6FC622AD0299E00F44810 /* Teacher+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Teacher+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		04A6FC632AD0299E00F44810 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
-		04A6FC642AD0299E00F44810 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		04A6FC652AD0299E00F44810 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
-		04A6FC662AD0299E00F44810 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		04A6FC522AD022ED00F44810 /* CollectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorVC.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		04C190F42AD6717700A1CBB7 /* Teacher+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Teacher+CoreDataClass.swift"; path = "../Teacher+CoreDataClass.swift"; sourceTree = "<group>"; };
+		04C190F52AD6717700A1CBB7 /* Teacher+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Teacher+CoreDataProperties.swift"; path = "../Teacher+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		04C190F62AD6717700A1CBB7 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataClass.swift"; path = "../Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		04C190F72AD6717700A1CBB7 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataProperties.swift"; path = "../Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		04C190F82AD6717700A1CBB7 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Student+CoreDataClass.swift"; path = "../Student+CoreDataClass.swift"; sourceTree = "<group>"; };
+		04C190F92AD6717700A1CBB7 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Student+CoreDataProperties.swift"; path = "../Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		04DC2A412AD3E15800B57BE0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043824412AD7BB1300732AF9 /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				043824422AD7BE1400732AF9 /* CoreDataManager.swift */,
+			);
+			path = coreData;
+			sourceTree = "<group>";
+		};
 		0465CDB62ACEA5C7006CFA13 = {
 			isa = PBXGroup;
 			children = (
@@ -74,17 +84,16 @@
 		0465CDC12ACEA5C7006CFA13 /* schoolSystem */ = {
 			isa = PBXGroup;
 			children = (
+				043824412AD7BB1300732AF9 /* coreData */,
+				04C190F32AD6647600A1CBB7 /* controller */,
 				04A6FC602AD028BD00F44810 /* model */,
 				0465CDC22ACEA5C7006CFA13 /* AppDelegate.swift */,
 				0465CDC42ACEA5C7006CFA13 /* SceneDelegate.swift */,
-				0465CDC62ACEA5C7006CFA13 /* ViewController.swift */,
 				0465CDC82ACEA5C7006CFA13 /* Main.storyboard */,
 				0465CDCE2ACEA5C9006CFA13 /* Assets.xcassets */,
 				0465CDD02ACEA5C9006CFA13 /* LaunchScreen.storyboard */,
 				0465CDD32ACEA5C9006CFA13 /* Info.plist */,
 				0465CDCB2ACEA5C7006CFA13 /* schoolSystem.xcdatamodeld */,
-				04A6FC522AD022ED00F44810 /* CollectorVC.swift */,
-				04DC2A412AD3E15800B57BE0 /* DetailView.swift */,
 			);
 			path = schoolSystem;
 			sourceTree = "<group>";
@@ -92,14 +101,24 @@
 		04A6FC602AD028BD00F44810 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				04A6FC612AD0299E00F44810 /* Teacher+CoreDataClass.swift */,
-				04A6FC622AD0299E00F44810 /* Teacher+CoreDataProperties.swift */,
-				04A6FC632AD0299E00F44810 /* Person+CoreDataClass.swift */,
-				04A6FC642AD0299E00F44810 /* Person+CoreDataProperties.swift */,
-				04A6FC652AD0299E00F44810 /* Student+CoreDataClass.swift */,
-				04A6FC662AD0299E00F44810 /* Student+CoreDataProperties.swift */,
+				04C190F42AD6717700A1CBB7 /* Teacher+CoreDataClass.swift */,
+				04C190F52AD6717700A1CBB7 /* Teacher+CoreDataProperties.swift */,
+				04C190F62AD6717700A1CBB7 /* Person+CoreDataClass.swift */,
+				04C190F72AD6717700A1CBB7 /* Person+CoreDataProperties.swift */,
+				04C190F82AD6717700A1CBB7 /* Student+CoreDataClass.swift */,
+				04C190F92AD6717700A1CBB7 /* Student+CoreDataProperties.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		04C190F32AD6647600A1CBB7 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0465CDC62ACEA5C7006CFA13 /* ViewController.swift */,
+				04A6FC522AD022ED00F44810 /* CollectorVC.swift */,
+				04DC2A412AD3E15800B57BE0 /* DetailView.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,18 +192,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A6FC692AD0299E00F44810 /* Person+CoreDataClass.swift in Sources */,
 				0465CDC72ACEA5C7006CFA13 /* ViewController.swift in Sources */,
-				04A6FC6A2AD0299E00F44810 /* Person+CoreDataProperties.swift in Sources */,
-				04A6FC682AD0299E00F44810 /* Teacher+CoreDataProperties.swift in Sources */,
 				0465CDC32ACEA5C7006CFA13 /* AppDelegate.swift in Sources */,
 				0465CDCD2ACEA5C7006CFA13 /* schoolSystem.xcdatamodeld in Sources */,
 				04A6FC532AD022ED00F44810 /* CollectorVC.swift in Sources */,
-				04A6FC672AD0299E00F44810 /* Teacher+CoreDataClass.swift in Sources */,
-				04A6FC6C2AD0299E00F44810 /* Student+CoreDataProperties.swift in Sources */,
+				04C190FB2AD6717700A1CBB7 /* Teacher+CoreDataProperties.swift in Sources */,
+				04C190FC2AD6717700A1CBB7 /* Person+CoreDataClass.swift in Sources */,
+				04C190FF2AD6717700A1CBB7 /* Student+CoreDataProperties.swift in Sources */,
+				043824432AD7BE1400732AF9 /* CoreDataManager.swift in Sources */,
+				04C190FD2AD6717700A1CBB7 /* Person+CoreDataProperties.swift in Sources */,
+				04C190FE2AD6717700A1CBB7 /* Student+CoreDataClass.swift in Sources */,
 				04DC2A422AD3E15800B57BE0 /* DetailView.swift in Sources */,
+				04C190FA2AD6717700A1CBB7 /* Teacher+CoreDataClass.swift in Sources */,
 				0465CDC52ACEA5C7006CFA13 /* SceneDelegate.swift in Sources */,
-				04A6FC6B2AD0299E00F44810 /* Student+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

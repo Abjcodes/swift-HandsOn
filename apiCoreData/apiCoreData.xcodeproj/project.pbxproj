@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0420623D2AD577EC00888968 /* EmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420623C2AD577EC00888968 /* EmployeeService.swift */; };
+		042062402AD5782A00888968 /* EmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420623F2AD5782A00888968 /* EmployeeModel.swift */; };
+		042062432AD57A6300888968 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042062422AD57A6300888968 /* CoreDataManager.swift */; };
 		0465CD972ACE8896006CFA13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465CD962ACE8896006CFA13 /* AppDelegate.swift */; };
 		0465CD992ACE8896006CFA13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465CD982ACE8896006CFA13 /* SceneDelegate.swift */; };
 		0465CD9B2ACE8896006CFA13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465CD9A2ACE8896006CFA13 /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0420623C2AD577EC00888968 /* EmployeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeService.swift; sourceTree = "<group>"; };
+		0420623F2AD5782A00888968 /* EmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeModel.swift; sourceTree = "<group>"; };
+		042062422AD57A6300888968 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0465CD932ACE8896006CFA13 /* apiCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apiCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0465CD962ACE8896006CFA13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0465CD982ACE8896006CFA13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0420623B2AD577D900888968 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				0420623C2AD577EC00888968 /* EmployeeService.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		0420623E2AD5780500888968 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				0420623F2AD5782A00888968 /* EmployeeModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		042062412AD578D600888968 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0465CD9A2ACE8896006CFA13 /* ViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
 		0465CD8A2ACE8896006CFA13 = {
 			isa = PBXGroup;
 			children = (
@@ -62,10 +92,12 @@
 		0465CD952ACE8896006CFA13 /* apiCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				0465CDB12ACE8F13006CFA13 /* Model */,
+				042062412AD578D600888968 /* controllers */,
+				0420623E2AD5780500888968 /* models */,
+				0420623B2AD577D900888968 /* network */,
+				0465CDB12ACE8F13006CFA13 /* coreData */,
 				0465CD962ACE8896006CFA13 /* AppDelegate.swift */,
 				0465CD982ACE8896006CFA13 /* SceneDelegate.swift */,
-				0465CD9A2ACE8896006CFA13 /* ViewController.swift */,
 				0465CD9C2ACE8896006CFA13 /* Main.storyboard */,
 				0465CDA22ACE8898006CFA13 /* Assets.xcassets */,
 				0465CDA42ACE8898006CFA13 /* LaunchScreen.storyboard */,
@@ -75,13 +107,14 @@
 			path = apiCoreData;
 			sourceTree = "<group>";
 		};
-		0465CDB12ACE8F13006CFA13 /* Model */ = {
+		0465CDB12ACE8F13006CFA13 /* coreData */ = {
 			isa = PBXGroup;
 			children = (
 				0465CDB22ACE8F75006CFA13 /* EmployeeEntity+CoreDataClass.swift */,
 				0465CDB32ACE8F75006CFA13 /* EmployeeEntity+CoreDataProperties.swift */,
+				042062422AD57A6300888968 /* CoreDataManager.swift */,
 			);
-			path = Model;
+			path = coreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +190,13 @@
 			files = (
 				0465CD9B2ACE8896006CFA13 /* ViewController.swift in Sources */,
 				0465CDA12ACE8896006CFA13 /* apiCoreData.xcdatamodeld in Sources */,
+				0420623D2AD577EC00888968 /* EmployeeService.swift in Sources */,
 				0465CDB52ACE8F75006CFA13 /* EmployeeEntity+CoreDataProperties.swift in Sources */,
 				0465CDB42ACE8F75006CFA13 /* EmployeeEntity+CoreDataClass.swift in Sources */,
 				0465CD972ACE8896006CFA13 /* AppDelegate.swift in Sources */,
+				042062432AD57A6300888968 /* CoreDataManager.swift in Sources */,
 				0465CD992ACE8896006CFA13 /* SceneDelegate.swift in Sources */,
+				042062402AD5782A00888968 /* EmployeeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

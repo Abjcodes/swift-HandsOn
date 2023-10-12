@@ -181,6 +181,7 @@
                         <outlet property="idOutlet" destination="jly-JQ-vmy" id="qB4-Pg-ZUT"/>
                         <outlet property="nameOutlet" destination="0sr-kx-z8g" id="wtw-t2-NeM"/>
                         <outlet property="roleOutlet" destination="E1p-cl-Yv2" id="tdk-da-TJo"/>
+                        <outlet property="saveButton" destination="eIr-m2-768" id="bek-LO-b91"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAc-Iy-2In" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -19,6 +19,7 @@ class CollectorVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var idOutlet: UITextField!
     @IBOutlet weak var roleOutlet: UITextField!
     
+    @IBOutlet weak var saveButton: UIButton!
     var transitionDelegate: CollectorVCDelegate!
     
     override func viewDidLoad() {
@@ -28,6 +29,32 @@ class CollectorVC: UIViewController, UITextFieldDelegate {
         self.genderOutlet.delegate = self
         self.idOutlet.delegate = self
         self.roleOutlet.delegate = self
+        
+        // Add observers for text field changes
+            nameOutlet.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+            ageOutlet.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+            genderOutlet.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+            idOutlet.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+            roleOutlet.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+            
+            // Initially, disable the button
+            saveButton.isEnabled = false
+
+    }
+    
+    @objc func textFieldDidChange() {
+        // Check if all text fields have text
+        guard let name = nameOutlet.text, !name.isEmpty,
+              let ageText = ageOutlet.text, !ageText.isEmpty,
+              let gender = genderOutlet.text, !gender.isEmpty,
+              let idText = idOutlet.text, !idText.isEmpty,
+              let role = roleOutlet.text, !role.isEmpty else {
+            saveButton.isEnabled = false
+            return
+        }
+        
+        // Enable the button if all fields have text
+        saveButton.isEnabled = true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

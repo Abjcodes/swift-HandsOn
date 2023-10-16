@@ -24,6 +24,13 @@ class ViewController: UIViewController {
                     showAlert(title: "Validation Error", message: "Please enter both username and password.")
                     return
                 }
+        
+        let emailRegex = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$"
+               let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+               if !emailPredicate.evaluate(with: username) {
+                   showAlert(title: "Validation Error", message: "Please enter a valid email address.")
+                   return
+               }
 
                 // You can add additional validation here, e.g., minimum length for the password
                 if password.count < 6 {

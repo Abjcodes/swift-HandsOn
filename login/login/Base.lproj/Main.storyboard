@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="50" id="yxO-b1-T3b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="4we-cA-dmx"/>
@@ -100,6 +100,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Sign up" cornerStyle="medium">
                                     <color key="baseForegroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="6s3-KZ-FQo" kind="show" id="Uhx-e8-FKr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -224,6 +227,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="4mF-rs-7sh"/>
                     <connections>
                         <outlet property="passwordTF" destination="Umf-aY-Xyk" id="oRO-Jp-3d1"/>
                         <outlet property="userNameTF" destination="fgS-BJ-yh4" id="ogZ-Xj-4NR"/>
@@ -232,6 +236,127 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="107.51072961373391" y="114.41860465116279"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wQn-4Y-dEf">
+            <objects>
+                <viewController id="6s3-KZ-FQo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6qF-gv-V0Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfj-en-rh4">
+                                <rect key="frame" x="20" y="284" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PjX-DQ-HS1"/>
+                                    <constraint firstAttribute="height" constant="50" id="vE8-Lq-47X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PjX-DQ-HS1"/>
+                                        <exclude reference="vE8-Lq-47X"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="vE8-Lq-47X"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="PjX-DQ-HS1"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecS-cM-TqF">
+                                <rect key="frame" x="20" y="351" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IHm-hG-IS5"/>
+                                    <constraint firstAttribute="height" constant="50" id="Zzo-zy-Uu5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IHm-hG-IS5"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="IHm-hG-IS5"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x8g-No-Rgz">
+                                <rect key="frame" x="20" y="418" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QTL-V9-MTK"/>
+                                    <constraint firstAttribute="height" constant="50" id="m7g-3e-hoc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="m7g-3e-hoc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="m7g-3e-hoc"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="H7o-Ag-ErC">
+                                <rect key="frame" x="20" y="505.99999999999994" width="374" height="34.333333333333314"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="knT-gL-61v"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign up" cornerStyle="medium">
+                                    <color key="baseForegroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                </buttonConfiguration>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="knT-gL-61v"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="knT-gL-61v"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="logInBtnOnSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nuU-yo-FjP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NlP-6b-pQc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NlP-6b-pQc" firstAttribute="trailing" secondItem="Bfj-en-rh4" secondAttribute="trailing" constant="20" id="11f-q0-A6W"/>
+                            <constraint firstItem="x8g-No-Rgz" firstAttribute="centerY" secondItem="6qF-gv-V0Y" secondAttribute="centerY" id="1b1-Io-CiV"/>
+                            <constraint firstItem="NlP-6b-pQc" firstAttribute="trailing" secondItem="ecS-cM-TqF" secondAttribute="trailing" constant="20" id="1vM-RQ-ogt"/>
+                            <constraint firstItem="ecS-cM-TqF" firstAttribute="leading" secondItem="NlP-6b-pQc" secondAttribute="leading" constant="20" id="24h-bO-QVy"/>
+                            <constraint firstItem="ecS-cM-TqF" firstAttribute="top" secondItem="Bfj-en-rh4" secondAttribute="bottom" constant="17" id="H4b-37-Hv3"/>
+                            <constraint firstItem="H7o-Ag-ErC" firstAttribute="top" secondItem="x8g-No-Rgz" secondAttribute="bottom" constant="38" id="KeW-Pb-riT"/>
+                            <constraint firstItem="NlP-6b-pQc" firstAttribute="trailing" secondItem="H7o-Ag-ErC" secondAttribute="trailing" constant="20" id="M6r-9s-FFL"/>
+                            <constraint firstItem="NlP-6b-pQc" firstAttribute="trailing" secondItem="x8g-No-Rgz" secondAttribute="trailing" constant="20" id="Rj5-95-AKg"/>
+                            <constraint firstItem="H7o-Ag-ErC" firstAttribute="leading" secondItem="NlP-6b-pQc" secondAttribute="leading" constant="20" id="Ryj-Qq-0rn"/>
+                            <constraint firstItem="NlP-6b-pQc" firstAttribute="trailing" secondItem="H7o-Ag-ErC" secondAttribute="trailing" constant="20" id="SRy-9D-F3k"/>
+                            <constraint firstItem="x8g-No-Rgz" firstAttribute="leading" secondItem="NlP-6b-pQc" secondAttribute="leading" constant="20" id="ZUK-Np-INB"/>
+                            <constraint firstItem="x8g-No-Rgz" firstAttribute="top" secondItem="ecS-cM-TqF" secondAttribute="bottom" constant="17" id="deL-9h-qWb"/>
+                            <constraint firstItem="Bfj-en-rh4" firstAttribute="leading" secondItem="NlP-6b-pQc" secondAttribute="leading" constant="20" id="hyo-Re-TEn"/>
+                            <constraint firstItem="H7o-Ag-ErC" firstAttribute="leading" secondItem="NlP-6b-pQc" secondAttribute="leading" constant="20" id="l2J-2b-zTI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UkZ-WC-iTZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sr0-Jc-Ou2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="114"/>
         </scene>
     </scenes>
     <resources>

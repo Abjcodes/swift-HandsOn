@@ -1,13 +1,12 @@
 //
 //  AppDelegate.swift
-//  login
+//  makeUpProducts
 //
-//  Created by P10 on 13/10/23.
+//  Created by P10 on 18/10/23.
 //
 
 import UIKit
 import CoreData
-import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        FirebaseApp.configure()
+        // Override point for customization after application launch.
         return true
     }
 
@@ -42,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "login")
+        let container = NSPersistentContainer(name: "makeUpProducts")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

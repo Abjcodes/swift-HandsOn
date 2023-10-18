@@ -369,7 +369,7 @@
         <!--LogoutVC-->
         <scene sceneID="JqI-II-9KV">
             <objects>
-                <viewController storyboardIdentifier="LogoutVC" title="LogoutVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ibc-uW-Qbl" customClass="LogoutVC" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogoutVC" title="LogoutVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ibc-uW-Qbl" customClass="LogoutVC" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cd8-Xs-GlJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

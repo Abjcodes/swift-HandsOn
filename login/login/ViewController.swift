@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
@@ -17,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func logInBtnOnSubmit(_ sender: Any) {
                 // Ensure that the username and password fields are not empty
                 guard let username = userNameTF.text, !username.isEmpty,
@@ -37,6 +39,18 @@ class ViewController: UIViewController {
                     showAlert(title: "Validation Error", message: "Password must be at least 6 characters long.")
                     return
                 }
+        
+        Auth.auth().signIn(withEmail: username, password: password) { [weak self] authResult, error in
+            if let error = error {
+                self?.showAlert(title: "Login Error", message: error.localizedDescription)
+            }
+          guard let strongSelf = self else { return }
+            guard (Auth.auth().currentUser != nil) else {return}
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let viewController = storyboard.instantiateViewController(withIdentifier: "LogoutVC") as? LogoutVC {
+                strongSelf.present(viewController, animated: true, completion: nil)
+            }
+        }
 
     }
     
@@ -45,7 +59,6 @@ class ViewController: UIViewController {
            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
            self.present(alert, animated: true, completion: nil)
        }
-    
 
 }
 

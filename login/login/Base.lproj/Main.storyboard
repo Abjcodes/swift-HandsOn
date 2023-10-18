@@ -44,6 +44,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log in" cornerStyle="medium">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                    </backgroundConfiguration>
                                     <color key="baseForegroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 </buttonConfiguration>
                                 <variation key="default">
@@ -88,7 +91,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot password?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qH-4b-86X">
                                 <rect key="frame" x="20" y="497" width="374" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <color key="textColor" name="AccentColor"/>
+                                <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syY-ST-LYm">
@@ -98,7 +101,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign up" cornerStyle="medium">
-                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                    <color key="baseForegroundColor" systemColor="tintColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="6s3-KZ-FQo" kind="show" id="Uhx-e8-FKr"/>
@@ -235,12 +238,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="107.51072961373391" y="114.41860465116279"/>
+            <point key="canvasLocation" x="112" y="113"/>
         </scene>
-        <!--View Controller-->
+        <!--Create UserVC-->
         <scene sceneID="wQn-4Y-dEf">
             <objects>
-                <viewController id="6s3-KZ-FQo" sceneMemberID="viewController">
+                <viewController id="6s3-KZ-FQo" customClass="CreateUserVC" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6qF-gv-V0Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,7 +313,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="H7o-Ag-ErC">
                                 <rect key="frame" x="20" y="505.99999999999994" width="374" height="34.333333333333314"/>
-                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="knT-gL-61v"/>
                                 </constraints>
@@ -329,7 +332,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="logInBtnOnSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nuU-yo-FjP"/>
+                                    <action selector="createAccount:" destination="6s3-KZ-FQo" eventType="touchUpInside" id="F3Z-ra-FBP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -353,21 +356,82 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UkZ-WC-iTZ"/>
+                    <connections>
+                        <outlet property="confirmedPassword" destination="x8g-No-Rgz" id="nXT-o6-p5P"/>
+                        <outlet property="email" destination="Bfj-en-rh4" id="geC-aB-00p"/>
+                        <outlet property="password" destination="ecS-cM-TqF" id="9qW-KF-HZR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sr0-Jc-Ou2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770" y="114"/>
+            <point key="canvasLocation" x="835" y="114"/>
+        </scene>
+        <!--LogoutVC-->
+        <scene sceneID="JqI-II-9KV">
+            <objects>
+                <viewController storyboardIdentifier="LogoutVC" title="LogoutVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ibc-uW-Qbl" customClass="LogoutVC" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cd8-Xs-GlJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8F-QR-i7d">
+                                <rect key="frame" x="20" y="423" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lh4-hf-sSN">
+                                <rect key="frame" x="20" y="778" width="374" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log out">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOutOnSubmit:" destination="ibc-uW-Qbl" eventType="touchUpInside" id="T8c-b5-9DY"/>
+                                    <action selector="logOutOnSubmit:" destination="IxQ-Ag-SwS" eventType="touchUpInside" id="nj8-bI-uTL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d2G-Gz-1GE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o8F-QR-i7d" firstAttribute="top" secondItem="d2G-Gz-1GE" secondAttribute="top" constant="379" id="5Y3-dY-TiR"/>
+                            <constraint firstItem="o8F-QR-i7d" firstAttribute="centerX" secondItem="cd8-Xs-GlJ" secondAttribute="centerX" id="6VU-TL-hrn"/>
+                            <constraint firstItem="lh4-hf-sSN" firstAttribute="leading" secondItem="d2G-Gz-1GE" secondAttribute="leading" constant="20" id="8Qw-nh-6Zy"/>
+                            <constraint firstItem="d2G-Gz-1GE" firstAttribute="bottom" secondItem="lh4-hf-sSN" secondAttribute="bottom" constant="49" id="DTB-Fv-Vw6"/>
+                            <constraint firstItem="d2G-Gz-1GE" firstAttribute="trailing" secondItem="o8F-QR-i7d" secondAttribute="trailing" constant="20" id="RxT-1c-TTc"/>
+                            <constraint firstItem="d2G-Gz-1GE" firstAttribute="trailing" secondItem="lh4-hf-sSN" secondAttribute="trailing" constant="20" id="d7W-CT-fow"/>
+                            <constraint firstItem="o8F-QR-i7d" firstAttribute="leading" secondItem="d2G-Gz-1GE" secondAttribute="leading" constant="20" id="xW6-2c-XwH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userName" destination="o8F-QR-i7d" id="1Q1-qu-x7D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVo-Qh-iV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="IxQ-Ag-SwS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1549" y="113"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

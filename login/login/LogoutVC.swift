@@ -11,8 +11,13 @@ import FirebaseAuth
 class LogoutVC: UIViewController {
     @IBOutlet weak var userName: UILabel!
     override func viewDidLoad() {
-        let user = Auth.auth().currentUser
-        userName.text = "Email: \(String(describing: user!.email))"
+        if let user = Auth.auth().currentUser {
+            if let userEmail = user.email {
+                userName.text = "Email: \(userEmail)"
+            } else {
+                userName.text = "No email available"
+            }
+        }
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }

@@ -18,18 +18,15 @@ class CreateUserVC: UIViewController {
     
     override func viewDidLoad() {
             super.viewDidLoad()
-            // Add delegates for text fields
             email.delegate = self
             password.delegate = self
             confirmedPassword.delegate = self
         }
         
-        // Function to validate email address
         func isValidEmail(_ email: String) -> Bool {
             return true
         }
         
-        // Function to validate password
         func isValidPassword(_ password: String) -> Bool {
             return password.count >= 8
         }
@@ -47,19 +44,16 @@ class CreateUserVC: UIViewController {
                                        } else {
                                            // Login successful
                                            self.dismiss(animated: true, completion: nil)
-                                           self.showAlert(title: "Succesful", message: "Account created succesfully")
+//                                           self.showAlert(title: "Succesful", message: "Account created succesfully")
                                        }
                                    }
                         } else {
-                            // Passwords do not match
                             showAlert(title: "Validation error", message: "Passwords do not match.")
                         }
                     } else {
-                        // Invalid password
                         showAlert(title: "Validation error", message: "Password must be at least 8 characters long.")
                     }
                 } else {
-                    // Invalid email
                     showAlert(title: "Validation error", message: "Please enter a valid email address.")
                 }
             }
@@ -75,7 +69,6 @@ class CreateUserVC: UIViewController {
     // MARK: - UITextFieldDelegate
     extension CreateUserVC: UITextFieldDelegate {
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            // Dismiss the keyboard when the Return key is tapped
             textField.resignFirstResponder()
             return true
         }

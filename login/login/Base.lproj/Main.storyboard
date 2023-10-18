@@ -238,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="113"/>
+            <point key="canvasLocation" x="107.51072961373391" y="114.41860465116279"/>
         </scene>
         <!--Create UserVC-->
         <scene sceneID="wQn-4Y-dEf">
@@ -369,13 +369,13 @@
         <!--LogoutVC-->
         <scene sceneID="JqI-II-9KV">
             <objects>
-                <viewController storyboardIdentifier="LogoutVC" title="LogoutVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ibc-uW-Qbl" customClass="LogoutVC" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogoutVC" title="LogoutVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ibc-uW-Qbl" customClass="LogoutVC" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cd8-Xs-GlJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8F-QR-i7d">
-                                <rect key="frame" x="20" y="423" width="374" height="21"/>
+                                <rect key="frame" x="186.33333333333334" y="437.66666666666669" width="41.333333333333343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -390,25 +390,23 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logOutOnSubmit:" destination="ibc-uW-Qbl" eventType="touchUpInside" id="T8c-b5-9DY"/>
                                     <action selector="logOutOnSubmit:" destination="IxQ-Ag-SwS" eventType="touchUpInside" id="nj8-bI-uTL"/>
+                                    <action selector="logOutOnSubmit:" destination="ibc-uW-Qbl" eventType="touchUpInside" id="qJe-QW-fkx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d2G-Gz-1GE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="o8F-QR-i7d" firstAttribute="top" secondItem="d2G-Gz-1GE" secondAttribute="top" constant="379" id="5Y3-dY-TiR"/>
-                            <constraint firstItem="o8F-QR-i7d" firstAttribute="centerX" secondItem="cd8-Xs-GlJ" secondAttribute="centerX" id="6VU-TL-hrn"/>
                             <constraint firstItem="lh4-hf-sSN" firstAttribute="leading" secondItem="d2G-Gz-1GE" secondAttribute="leading" constant="20" id="8Qw-nh-6Zy"/>
+                            <constraint firstItem="o8F-QR-i7d" firstAttribute="centerY" secondItem="cd8-Xs-GlJ" secondAttribute="centerY" id="9G9-X7-OTF"/>
+                            <constraint firstItem="o8F-QR-i7d" firstAttribute="centerX" secondItem="cd8-Xs-GlJ" secondAttribute="centerX" id="A8C-0R-KL4"/>
                             <constraint firstItem="d2G-Gz-1GE" firstAttribute="bottom" secondItem="lh4-hf-sSN" secondAttribute="bottom" constant="49" id="DTB-Fv-Vw6"/>
-                            <constraint firstItem="d2G-Gz-1GE" firstAttribute="trailing" secondItem="o8F-QR-i7d" secondAttribute="trailing" constant="20" id="RxT-1c-TTc"/>
                             <constraint firstItem="d2G-Gz-1GE" firstAttribute="trailing" secondItem="lh4-hf-sSN" secondAttribute="trailing" constant="20" id="d7W-CT-fow"/>
-                            <constraint firstItem="o8F-QR-i7d" firstAttribute="leading" secondItem="d2G-Gz-1GE" secondAttribute="leading" constant="20" id="xW6-2c-XwH"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="userName" destination="o8F-QR-i7d" id="1Q1-qu-x7D"/>
+                        <outlet property="userName" destination="o8F-QR-i7d" id="rg3-Ri-h2e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVo-Qh-iV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

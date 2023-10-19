@@ -11,16 +11,13 @@ import FirebaseAuth
 class CreateUserVC: UIViewController {
     
     @IBOutlet weak var email: UITextField!
-    
+
     @IBOutlet weak var password: UITextField!
     
     @IBOutlet weak var confirmedPassword: UITextField!
     
     override func viewDidLoad() {
             super.viewDidLoad()
-            email.delegate = self
-            password.delegate = self
-            confirmedPassword.delegate = self
         }
         
         func isValidEmail(_ email: String) -> Bool {
@@ -32,7 +29,6 @@ class CreateUserVC: UIViewController {
         }
         
         @IBAction func createAccount(_ sender: UIButton) {
-            // Perform validation when the user tries to create an account
             if let emailText = email.text, let passwordText = password.text, let confirmedPasswordText = confirmedPassword.text {
                 if isValidEmail(emailText) {
                     if isValidPassword(passwordText) {
@@ -42,9 +38,7 @@ class CreateUserVC: UIViewController {
                                        if let error = error {
                                            self.showAlert( title: "Sign up error", message: error.localizedDescription)
                                        } else {
-                                           // Login successful
                                            self.dismiss(animated: true, completion: nil)
-//                                           self.showAlert(title: "Succesful", message: "Account created succesfully")
                                        }
                                    }
                         } else {
@@ -69,7 +63,7 @@ class CreateUserVC: UIViewController {
     // MARK: - UITextFieldDelegate
     extension CreateUserVC: UITextFieldDelegate {
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            return true
+              textField.resignFirstResponder()
+              return true
         }
     }

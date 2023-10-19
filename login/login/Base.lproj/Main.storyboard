@@ -70,7 +70,7 @@
                                     <constraint firstAttribute="height" constant="50" id="R0u-rz-Hwb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="ISR-4b-5rC"/>
@@ -232,8 +232,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="4mF-rs-7sh"/>
                     <connections>
-                        <outlet property="passwordTF" destination="Umf-aY-Xyk" id="oRO-Jp-3d1"/>
-                        <outlet property="userNameTF" destination="fgS-BJ-yh4" id="ogZ-Xj-4NR"/>
+                        <outlet property="email" destination="fgS-BJ-yh4" id="ogZ-Xj-4NR"/>
+                        <outlet property="password" destination="Umf-aY-Xyk" id="oRO-Jp-3d1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -243,13 +243,13 @@
         <!--Create UserVC-->
         <scene sceneID="wQn-4Y-dEf">
             <objects>
-                <viewController id="6s3-KZ-FQo" customClass="CreateUserVC" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="6s3-KZ-FQo" customClass="CreateUserVC" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6qF-gv-V0Y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfj-en-rh4">
-                                <rect key="frame" x="20" y="284" width="374" height="50"/>
+                                <rect key="frame" x="20" y="289" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PjX-DQ-HS1"/>
                                     <constraint firstAttribute="height" constant="50" id="vE8-Lq-47X"/>
@@ -272,9 +272,12 @@
                                         <include reference="PjX-DQ-HS1"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="6s3-KZ-FQo" id="a9D-eo-WVa"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecS-cM-TqF">
-                                <rect key="frame" x="20" y="351" width="374" height="50"/>
+                                <rect key="frame" x="20" y="356" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IHm-hG-IS5"/>
                                     <constraint firstAttribute="height" constant="50" id="Zzo-zy-Uu5"/>
@@ -291,9 +294,12 @@
                                         <include reference="IHm-hG-IS5"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="6s3-KZ-FQo" id="qFE-ZB-aJQ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x8g-No-Rgz">
-                                <rect key="frame" x="20" y="418" width="374" height="50"/>
+                                <rect key="frame" x="20" y="423" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QTL-V9-MTK"/>
                                     <constraint firstAttribute="height" constant="50" id="m7g-3e-hoc"/>
@@ -310,9 +316,12 @@
                                         <include reference="m7g-3e-hoc"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="6s3-KZ-FQo" id="gcX-8d-Dl0"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="H7o-Ag-ErC">
-                                <rect key="frame" x="20" y="505.99999999999994" width="374" height="34.333333333333314"/>
+                                <rect key="frame" x="20" y="510.99999999999994" width="374" height="34.333333333333314"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="knT-gL-61v"/>

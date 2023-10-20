@@ -45,7 +45,18 @@
 		0488455E2ADE82A70067B780 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0488455D2ADE82A70067B780 /* FirebaseStorage */; };
 		048845602ADE82A70067B780 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 0488455F2ADE82A70067B780 /* FirebaseStorageCombine-Community */; };
 		048845622ADE9A350067B780 /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048845612ADE9A350067B780 /* CreateUserVC.swift */; };
+		04B60E682AE131C900AD007F /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B60E672AE131C900AD007F /* ViewControllerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04B60E622AE130FB00AD007F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0411E5C22AD91AB500506AF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0411E5C92AD91AB500506AF4;
+			remoteInfo = login;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0411E5CA2AD91AB500506AF4 /* login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = login.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +72,9 @@
 		044BE0C52ADFAB2E00A4DF81 /* LogoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVC.swift; sourceTree = "<group>"; };
 		048845282ADE81DC0067B780 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		048845612ADE9A350067B780 /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
+		04B60E5E2AE130FB00AD007F /* loginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B60E672AE131C900AD007F /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		04B60E692AE13B5300AD007F /* login.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = login.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,13 +112,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04B60E5B2AE130FB00AD007F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0411E5C12AD91AB500506AF4 = {
 			isa = PBXGroup;
 			children = (
+				04B60E692AE13B5300AD007F /* login.xctestplan */,
 				0411E5CC2AD91AB500506AF4 /* login */,
+				04B60E5F2AE130FB00AD007F /* loginTests */,
 				0411E5CB2AD91AB500506AF4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				0411E5CA2AD91AB500506AF4 /* login.app */,
+				04B60E5E2AE130FB00AD007F /* loginTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +158,14 @@
 				0447ADAB2AE0F8C30026C9B6 /* BGgradient.swift */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		04B60E5F2AE130FB00AD007F /* loginTests */ = {
+			isa = PBXGroup;
+			children = (
+				04B60E672AE131C900AD007F /* ViewControllerTests.swift */,
+			);
+			path = loginTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +217,24 @@
 			productReference = 0411E5CA2AD91AB500506AF4 /* login.app */;
 			productType = "com.apple.product-type.application";
 		};
+		04B60E5D2AE130FB00AD007F /* loginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04B60E662AE130FB00AD007F /* Build configuration list for PBXNativeTarget "loginTests" */;
+			buildPhases = (
+				04B60E5A2AE130FB00AD007F /* Sources */,
+				04B60E5B2AE130FB00AD007F /* Frameworks */,
+				04B60E5C2AE130FB00AD007F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04B60E632AE130FB00AD007F /* PBXTargetDependency */,
+			);
+			name = loginTests;
+			productName = loginTests;
+			productReference = 04B60E5E2AE130FB00AD007F /* loginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,6 +247,10 @@
 				TargetAttributes = {
 					0411E5C92AD91AB500506AF4 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					04B60E5D2AE130FB00AD007F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 0411E5C92AD91AB500506AF4;
 					};
 				};
 			};
@@ -217,6 +271,7 @@
 			projectRoot = "";
 			targets = (
 				0411E5C92AD91AB500506AF4 /* login */,
+				04B60E5D2AE130FB00AD007F /* loginTests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +285,13 @@
 				048845292ADE81DC0067B780 /* GoogleService-Info.plist in Resources */,
 				0411E5DA2AD91AB700506AF4 /* Assets.xcassets in Resources */,
 				0411E5D52AD91AB500506AF4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B60E5C2AE130FB00AD007F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +312,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04B60E5A2AE130FB00AD007F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B60E682AE131C900AD007F /* ViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04B60E632AE130FB00AD007F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0411E5C92AD91AB500506AF4 /* login */;
+			targetProxy = 04B60E622AE130FB00AD007F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0411E5D32AD91AB500506AF4 /* Main.storyboard */ = {
@@ -445,6 +523,40 @@
 			};
 			name = Release;
 		};
+		04B60E642AE130FB00AD007F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abj.loginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/login.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/login";
+			};
+			name = Debug;
+		};
+		04B60E652AE130FB00AD007F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = abj.loginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/login.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/login";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -462,6 +574,15 @@
 			buildConfigurations = (
 				0411E5E22AD91AB700506AF4 /* Debug */,
 				0411E5E32AD91AB700506AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04B60E662AE130FB00AD007F /* Build configuration list for PBXNativeTarget "loginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04B60E642AE130FB00AD007F /* Debug */,
+				04B60E652AE130FB00AD007F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

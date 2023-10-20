@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "C6B93E10-ABFA-4075-A2E2-0146B2411B16",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:login.xcodeproj",
+      "identifier" : "0411E5C92AD91AB500506AF4",
+      "name" : "login"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:login.xcodeproj",
+        "identifier" : "04B60E5D2AE130FB00AD007F",
+        "name" : "loginTests"
+      }
+    }
+  ],
+  "version" : 1
+}

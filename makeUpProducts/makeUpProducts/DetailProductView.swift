@@ -18,8 +18,7 @@ class DetailProductView: UIViewController {
     var selectedProductColors: [ProductColor] = []
     
     override func viewDidLoad() {
-        
-        
+        title = "Product Details"
         let layout = ColourViewLayout()
         colourCollectionView.collectionViewLayout = layout
             super.viewDidLoad()
@@ -65,5 +64,3 @@ class DetailProductView: UIViewController {
             productDescription.frame.size = newSize
         }
     }
-
-

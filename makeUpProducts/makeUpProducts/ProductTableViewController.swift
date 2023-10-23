@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
     
     func isFiltering() -> Bool {
         return searchController.isActive && !searchBarIsEmpty()

@@ -45,17 +45,19 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
         if let name = product.name {
             cell.productName.text = name
         }
-        
+
         if let price = product.price, let priceSign = product.price_sign {
             cell.productPrice.text = "\(price) \(priceSign)"
         }
-        
+
+        // Handle tap (text view)
         if let productLink = product.product_link {
             let attributedString = NSMutableAttributedString(string: productLink)
             attributedString.addAttribute(.link, value: productLink, range: NSRange(location: 0, length: productLink.count))
             cell.productLink.attributedText = attributedString
         }
         
+
         if let imageURL = URL(string: product.image_link!) {
             URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
                 if let data = data, let image = UIImage(data: data) {
@@ -66,6 +68,7 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
             }.resume()
         }
     }
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 117

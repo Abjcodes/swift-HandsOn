@@ -11,13 +11,21 @@ class DetailProductView: UIViewController {
     
     
     @IBOutlet weak var colourCollectionView: UICollectionView!
-    @IBOutlet weak var productDescription: UITextView!
+    @IBOutlet weak var availableColors: UILabel!
+    @IBOutlet weak var productDescription: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     var selectedProductDescription: String = ""
     var selectedProductImageUrl: String = ""
     var selectedProductColors: [ProductColor] = []
     
     override func viewDidLoad() {
+        
+        // change in storyboard
+        if let labelFont = availableColors.font {
+               let boldFont = UIFont.boldSystemFont(ofSize: labelFont.pointSize)
+               availableColors.font = boldFont
+        }
+        
         title = "Product Details"
         let layout = ColourViewLayout()
         colourCollectionView.collectionViewLayout = layout
@@ -25,12 +33,6 @@ class DetailProductView: UIViewController {
         colourCollectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionViewCell")
             selectedProductDescription = (selectedProductDescription != "") ? selectedProductDescription : "No description found"
             productDescription.text = selectedProductDescription
-            updateTextViewSize()
-            productDescription.isScrollEnabled = false
-
-            // Set content hugging and compression resistance priorities
-            productDescription.setContentHuggingPriority(.required, for: .vertical)
-            productDescription.setContentCompressionResistancePriority(.required, for: .vertical)
 
             if let imageURL = URL(string: selectedProductImageUrl) {
                 URLSession.shared.dataTask(with: imageURL) { [weak self] (data, response, error) in
@@ -47,7 +49,6 @@ class DetailProductView: UIViewController {
             }
         
             configureCollectionView()
-            updateTextViewSize()
         }
     
         private func configureCollectionView() {
@@ -56,11 +57,4 @@ class DetailProductView: UIViewController {
           colourCollectionView.reloadData()
       }
       
-
-        // Function to update the UITextView's size
-        private func updateTextViewSize() {
-            let fixedWidth = productDescription.frame.size.width
-            let newSize = productDescription.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
-            productDescription.frame.size = newSize
-        }
     }

@@ -18,7 +18,7 @@ class ProductService{
                 return
             }
             
-            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if let error = error {
                     completion(nil, error)
                     return
@@ -29,17 +29,14 @@ class ProductService{
                         print(data)
                         let decoder = JSONDecoder()
                         let productResponse = try decoder.decode([ProductResponse].self, from: data)
-                        
                         completion(productResponse, nil)
-                               } catch {
-                                   print("Error parsing JSON: \(error)")
-                               }
+                       } catch {
+                        print("Error parsing JSON: \(error)")
+                       }
                 } else {
                     completion(nil, APIError.noData)
                 }
-            }
-            
-            task.resume()
+            }.resume()
         }
     }
 

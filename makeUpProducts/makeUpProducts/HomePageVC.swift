@@ -50,10 +50,8 @@ class HomePageVC: UIViewController {
        }
        
        private func fetchDataFromAPI() {
-           // Show loading view
            loadingView?.isHidden = false
            loadingView?.startLoading()
-           
            ProductService.shared.fetchMakeupProducts { [weak self] (fetchedProducts, error) in
                guard let self = self else { return }
                if let error = error {
@@ -61,8 +59,6 @@ class HomePageVC: UIViewController {
                } else if let fetchedProducts = fetchedProducts {
                    print("Fetched \(fetchedProducts.count) products")
                    self.products = fetchedProducts
-                   
-                   // Hide loading view and reload the table view
                    DispatchQueue.main.async {
                        self.loadingView?.stopLoading()
                        self.tableView.reloadData()

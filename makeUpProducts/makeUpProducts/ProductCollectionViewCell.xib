@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,30 +16,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="203" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wC7-W0-VNv">
-                        <rect key="frame" x="20" y="15" width="128" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="128" id="S8q-im-Ih3"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wC7-W0-VNv">
+                        <rect key="frame" x="16" y="15" width="130" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jf9-7J-kKn">
-                        <rect key="frame" x="162" y="9" width="33" height="32"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <rect key="frame" x="162" y="7" width="25" height="36"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="z4A-Wx-uIE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="Jf9-7J-kKn" firstAttribute="leading" secondItem="wC7-W0-VNv" secondAttribute="trailing" constant="14" id="4kP-0y-YBU"/>
-                <constraint firstItem="Jf9-7J-kKn" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="CEX-Kb-fQm"/>
-                <constraint firstItem="wC7-W0-VNv" firstAttribute="centerY" secondItem="Jf9-7J-kKn" secondAttribute="centerY" id="FeO-1a-k2X"/>
-                <constraint firstItem="Jf9-7J-kKn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="9" id="a5R-xd-l5s"/>
-                <constraint firstAttribute="trailing" secondItem="Jf9-7J-kKn" secondAttribute="trailing" constant="8" id="erd-Gi-tN7"/>
-                <constraint firstItem="wC7-W0-VNv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="sxN-va-kLF"/>
-                <constraint firstItem="wC7-W0-VNv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="xQk-KU-IgB"/>
+                <constraint firstAttribute="trailing" secondItem="Jf9-7J-kKn" secondAttribute="trailing" constant="16" id="AdP-V5-SaG"/>
+                <constraint firstItem="Jf9-7J-kKn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="7" id="RoG-7s-bxD"/>
+                <constraint firstAttribute="bottom" secondItem="Jf9-7J-kKn" secondAttribute="bottom" constant="7" id="amX-1d-SdF"/>
+                <constraint firstItem="wC7-W0-VNv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="d7G-J9-ZNQ"/>
+                <constraint firstAttribute="bottom" secondItem="wC7-W0-VNv" secondAttribute="bottom" constant="15" id="lbr-0R-8nV"/>
+                <constraint firstItem="Jf9-7J-kKn" firstAttribute="leading" secondItem="wC7-W0-VNv" secondAttribute="trailing" constant="16" id="n8R-pt-Pxw"/>
+                <constraint firstItem="Jf9-7J-kKn" firstAttribute="leading" secondItem="wC7-W0-VNv" secondAttribute="trailing" constant="16" id="rnn-lQ-hFd"/>
+                <constraint firstItem="wC7-W0-VNv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="xAL-Jr-vJm"/>
             </constraints>
             <size key="customSize" width="203" height="50"/>
             <connections>
@@ -50,9 +55,4 @@
             <point key="canvasLocation" x="147.32824427480915" y="-11.267605633802818"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

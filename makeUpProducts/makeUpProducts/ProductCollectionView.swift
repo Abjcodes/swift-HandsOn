@@ -16,9 +16,9 @@ extension DetailProductView: UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
         let color = selectedProductColors[indexPath.item]
-        cell.colorName.text = color.colour_name
+        cell.colorName.text = color.colourName
         // convert hex code to ui color
-        if let hexValue = color.hex_value {
+        if let hexValue = color.hexValue {
                cell.color.backgroundColor = colorFromHex(hexValue)
            } else {
                cell.color.backgroundColor = .clear

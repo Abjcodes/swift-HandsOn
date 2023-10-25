@@ -7,31 +7,57 @@
 
 import Foundation
 
-
 struct ProductResponse: Codable {
-    let api_featured_image: String?
+    let apiFeaturedImage: String?
     let brand: String?
     let category: String?
-    let created_at: String?
+    let createdAt: String?
     let currency: String?
     let description: String?
     let id: Int
-    let image_link: String?
+    let imageLink: String?
     let name: String?
     let price: String?
-    let price_sign: String?
-    let product_api_url: String?
-    let product_colors: [ProductColor]?
-    let product_link: String?
-    let product_type: String?
+    let priceSign: String?
+    let productApiUrl: String?
+    let productColors: [ProductColor]?
+    let productLink: String?
+    let productType: String?
     let rating: Float?
-    let tag_list: [String]?
-    let updated_at: String?
-    let website_link: String?
+    let tagList: [String]?
+    let updatedAt: String?
+    let websiteLink: String?
+
+    enum CodingKeys: String, CodingKey {
+        case apiFeaturedImage = "api_featured_image"
+        case brand
+        case category
+        case createdAt = "created_at"
+        case currency
+        case description
+        case id
+        case imageLink = "image_link"
+        case name
+        case price
+        case priceSign = "price_sign"
+        case productApiUrl = "product_api_url"
+        case productColors = "product_colors"
+        case productLink = "product_link"
+        case productType = "product_type"
+        case rating
+        case tagList = "tag_list"
+        case updatedAt = "updated_at"
+        case websiteLink = "website_link"
+    }
 }
 
 struct ProductColor: Codable {
-    let colour_name: String?
-    let hex_value: String?
+    let colourName: String?
+    let hexValue: String?
+
+    enum CodingKeys: String, CodingKey {
+        case colourName = "colour_name"
+        case hexValue = "hex_value"
+    }
 }
 

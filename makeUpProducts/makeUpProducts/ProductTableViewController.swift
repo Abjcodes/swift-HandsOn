@@ -46,19 +46,19 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
             cell.productName.text = name
         }
 
-        if let price = product.price, let priceSign = product.price_sign {
+        if let price = product.price, let priceSign = product.priceSign {
             cell.productPrice.text = "\(price) \(priceSign)"
         }
 
         // Handle tap (text view)
-        if let productLink = product.product_link {
+        if let productLink = product.productLink {
             let attributedString = NSMutableAttributedString(string: productLink)
             attributedString.addAttribute(.link, value: productLink, range: NSRange(location: 0, length: productLink.count))
             cell.productLink.attributedText = attributedString
         }
         
 
-        if let imageURL = URL(string: product.image_link!) {
+        if let imageURL = URL(string: product.imageLink!) {
             URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
                 if let data = data, let image = UIImage(data: data) {
                     DispatchQueue.main.async {
@@ -84,8 +84,8 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailProductView") as? DetailProductView {
             detailVC.selectedProductDescription = selectedProduct.description ?? "No description found"
-            detailVC.selectedProductImageUrl = selectedProduct.image_link!
-            detailVC.selectedProductColors = selectedProduct.product_colors!
+            detailVC.selectedProductImageUrl = selectedProduct.imageLink!
+            detailVC.selectedProductColors = selectedProduct.productColors!
             navigationController?.pushViewController(detailVC, animated: true)
         }
     }

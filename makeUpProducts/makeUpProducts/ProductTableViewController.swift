@@ -56,10 +56,7 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
             let attributedString = NSMutableAttributedString(string: linkText)
             attributedString.addAttribute(.link, value: productLink, range: NSRange(location: 0, length: linkText.count))
             cell.productLink.attributedText = attributedString
-           
         }
-
-        
 
         if let imageURL = URL(string: product.imageLink!) {
             ImageService.shared.loadImage(fromURL: imageURL) { (image) in

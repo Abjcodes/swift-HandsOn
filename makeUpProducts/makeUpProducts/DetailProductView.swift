@@ -39,6 +39,12 @@ class DetailProductView: UIViewController {
                 if let image = image {
                     DispatchQueue.main.async {
                         self?.productImage.image = image
+                        self?.productImage.layer.shadowColor = UIColor.black.cgColor
+                        self?.productImage.layer.shadowOffset = CGSize(width: 0, height: 1)
+                        self?.productImage.layer.shadowRadius = 8
+                        self?.productImage.layer.shadowOpacity = 0.5
+                        self?.productImage.layer.masksToBounds = false
+                        self?.productImage.layer.cornerRadius = 8
                     }
                 }
             }

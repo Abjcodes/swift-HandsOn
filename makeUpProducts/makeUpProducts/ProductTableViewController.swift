@@ -47,25 +47,28 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
         }
 
         if let price = product.price, let priceSign = product.priceSign {
-            cell.productPrice.text = "\(price) \(priceSign)"
+            cell.productPrice.text = "\(priceSign)\(price)"
         }
 
         // Handle tap (text view)
         if let productLink = product.productLink {
-            let attributedString = NSMutableAttributedString(string: productLink)
-            attributedString.addAttribute(.link, value: productLink, range: NSRange(location: 0, length: productLink.count))
+            let linkText = "Go to Product Link"
+            let attributedString = NSMutableAttributedString(string: linkText)
+            attributedString.addAttribute(.link, value: productLink, range: NSRange(location: 0, length: linkText.count))
             cell.productLink.attributedText = attributedString
+           
         }
+
         
 
         if let imageURL = URL(string: product.imageLink!) {
-            URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
-                if let data = data, let image = UIImage(data: data) {
+            ImageService.shared.loadImage(fromURL: imageURL) { (image) in
+                if let image = image {
                     DispatchQueue.main.async {
                         cell.productImage.image = image
                     }
                 }
-            }.resume()
+            }
         }
     }
 

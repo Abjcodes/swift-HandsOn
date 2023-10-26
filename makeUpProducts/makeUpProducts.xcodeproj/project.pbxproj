@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042F723D2AEA36880016B259 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F723C2AEA36880016B259 /* ImageService.swift */; };
 		043FA5362AE2865700418758 /* DetailProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA5352AE2865700418758 /* DetailProductView.swift */; };
 		044BE0D42ADFD91900A4DF81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BE0D32ADFD91900A4DF81 /* AppDelegate.swift */; };
 		044BE0D62ADFD91900A4DF81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BE0D52ADFD91900A4DF81 /* SceneDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042F723C2AEA36880016B259 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		043FA5352AE2865700418758 /* DetailProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductView.swift; sourceTree = "<group>"; };
 		044BE0D02ADFD91900A4DF81 /* makeUpProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = makeUpProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044BE0D32ADFD91900A4DF81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				04B60E582AE1017C00AD007F /* ProductService.swift */,
+				042F723C2AEA36880016B259 /* ImageService.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				04B42D082AE680EE001A64AC /* LoadingView.swift in Sources */,
 				04B42D022AE67DC1001A64AC /* ProductTableViewController.swift in Sources */,
 				044BE0EC2ADFD9CF00A4DF81 /* ProductTableViewCell.swift in Sources */,
+				042F723D2AEA36880016B259 /* ImageService.swift in Sources */,
 				04B42D042AE67E59001A64AC /* SearchController.swift in Sources */,
 				044BE0DE2ADFD91900A4DF81 /* makeUpProducts.xcdatamodeld in Sources */,
 				044BE0D62ADFD91900A4DF81 /* SceneDelegate.swift in Sources */,

@@ -26,6 +26,7 @@ extension DetailProductView: UICollectionViewDataSource, UICollectionViewDelegat
         return cell
     }
     
+    // helper method for hex to uicolor conversion
     func colorFromHex(_ hex: String) -> UIColor? {
             var cleanHex = hex.trimmingCharacters(in: .whitespacesAndNewlines)
             cleanHex = cleanHex.replacingOccurrences(of: "#", with: "")

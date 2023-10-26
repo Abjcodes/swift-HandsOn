@@ -34,19 +34,16 @@ class DetailProductView: UIViewController {
             selectedProductDescription = (selectedProductDescription != "") ? selectedProductDescription : "No description found"
             productDescription.text = selectedProductDescription
 
-            if let imageURL = URL(string: selectedProductImageUrl) {
-                URLSession.shared.dataTask(with: imageURL) { [weak self] (data, response, error) in
-                    if let data = data, let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self?.productImage.image = image
-                            self?.productImage.layer.shadowColor = UIColor.darkGray.cgColor
-                            self?.productImage.layer.shadowOffset = CGSize(width: 0, height: 2)
-                            self?.productImage.layer.shadowRadius = 4
-                            self?.productImage.layer.shadowOpacity = 0.5
-                        }
+        if let imageURL = URL(string: selectedProductImageUrl) {
+            ImageService.shared.loadImage(fromURL: imageURL) { [weak self] (image) in
+                if let image = image {
+                    DispatchQueue.main.async {
+                        self?.productImage.image = image
                     }
-                }.resume()
+                }
             }
+        }
+
         
             configureCollectionView()
         }

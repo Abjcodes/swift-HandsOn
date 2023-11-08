@@ -15,6 +15,7 @@
 - [x] Build an iOS application with Tab Bar View Controller to show 4 screens.
 - [x] Display English alphabets in a Collection view.
 - [x] Demonstrate how to use plist in an iOS app [read content of plist and display the same].
-- [ ] Build an iOS application to show the response from URL: [https://dummy.restapiexample.com/api/v1/employees](https://dummy.restapiexample.com/api/v1/employees).
-- [ ] Build an iOS application to save the response from URL: [https://dummy.restapiexample.com/api/v1/employees](https://dummy.restapiexample.com/api/v1/employees), in CoreData.
-- [ ] Build an iOS application to take user input and show the School system in CoreData [PFA].
+- [x] Build an iOS application to show the response from URL: [https://dummy.restapiexample.com/api/v1/employees](https://dummy.restapiexample.com/api/v1/employees).
+- [x] Build an iOS application to save the response from URL: [https://dummy.restapiexample.com/api/v1/employees](https://dummy.restapiexample.com/api/v1/employees), in CoreData.
+- [x] Build an iOS application to take user input and show the School system in CoreData [PFA].
+- [x] Create an app with 2 screens with a list of makeup products, the details about selected products, and provide the search functionality on the home screen.
